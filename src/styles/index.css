@@ -1,0 +1,24 @@
+@import url('./footer.css');
+@import url('./header.css');
+@import url('./main//main.css');
+
+html,
+body {
+  min-height: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}

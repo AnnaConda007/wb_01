@@ -1,0 +1,27 @@
+main {
+  display: flex;
+  flex-grow: 1;
+  background-color: rgb(176, 237, 141);
+}
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+.order-formation {
+  background-color: rgb(48, 98, 31);
+  width: 70%;
+}
+
+.total-information {
+  width: 30%;
+  background-color: rgb(31, 81, 98);
+}
+
+@media (max-width: 600px) {
+  .order-formation,
+  .total-information {
+    width: 100%;
+  }
+}
