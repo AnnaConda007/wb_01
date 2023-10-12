@@ -2,6 +2,16 @@
 @import url('./header.css');
 @import url('./main//main.css');
 
+@font-face {
+  font-family: 'UI';
+  src: url('../assets/fonts/Segoe\ UI.ttf');
+}
+
+:root {
+  --violet: #6725a8;
+  --white: #fff;
+}
+
 html,
 body {
   min-height: 100%;
@@ -9,6 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'UI', sans-serif;
 }
 
 body {
@@ -19,6 +30,13 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    width: 100%;
+  }
 }
