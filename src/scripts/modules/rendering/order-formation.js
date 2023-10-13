@@ -2,13 +2,23 @@ import { ordersData } from '../../../orderData.js'
 
 export const renderingOrderFormation = () => {
   const products = document.querySelector('.prod-containner__product-cards')
-  const topBtn = document.querySelector('.heder__topBtn')
+  const topBtn = document.querySelector('.header__topBtn')
   const productsDisabled = document.querySelector('.product-cards--disabled')
+  const topBtnDisabled = document.querySelector('.header__topBtn--disabled')
+
   topBtn.addEventListener('click', () => {
     if (products.style.display === 'none') {
       products.style.display = 'flex'
     } else {
       products.style.display = 'none'
+    }
+  })
+
+  topBtnDisabled.addEventListener('click', () => {
+    if (productsDisabled.style.display === 'none') {
+      productsDisabled.style.display = 'flex'
+    } else {
+      productsDisabled.style.display = 'none'
     }
   })
 
