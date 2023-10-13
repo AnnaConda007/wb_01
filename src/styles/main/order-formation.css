@@ -1,5 +1,7 @@
 .order-formation {
-  width: 70%;
+  flex-grow: 1;
+  max-width: 890px;
+  margin-right: 30px;
 }
 
 .order-formation_heder {
@@ -9,6 +11,7 @@
   padding-bottom: 2px;
   width: 100%;
   max-width: 890px;
+  margin-bottom: 15px;
 }
 
 .order-formation_text {
@@ -20,8 +23,10 @@
   margin-bottom: 15px;
 }
 
-.order-formation_top {
-  margin-right: 50px;
+@media (max-width: 1027px) {
+  .order-formation_top {
+    margin-right: 50px;
+  }
 }
 
 .check-all {
@@ -37,11 +42,15 @@
 
 .products {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .product-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -58,16 +67,21 @@
 .info {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: center;
   gap: 8px;
-  max-width: 540px;
-  width: 80%;
+  max-width: 550px;
   margin-left: 15px;
 }
 
 @media (max-width: 1027px) {
+  .product-card {
+    justify-content: flex-start;
+  }
+
   .info {
-    max-width: 287px;
+    max-width: 300px;
+    margin-left: 15px;
   }
 }
 
@@ -77,6 +91,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  max-width: 270px;
 }
 
 .details {
@@ -91,6 +106,7 @@
 }
 
 .details_text {
+  display: flex;
   margin: 0;
 }
 
@@ -120,12 +136,11 @@
 }
 
 .product-card_quantity {
-  padding-top: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: flex-start;
   min-width: 100px;
-  height: 108px;
 }
 
 .quantity_btns {
@@ -164,7 +179,6 @@
   display: flex;
   justify-content: space-between;
   width: 55px;
-  padding-bottom: 10px;
 }
 
 .price {
@@ -172,7 +186,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  width: 140px;
+  min-width: 120px;
   height: 100px;
   gap: 6px;
 }
@@ -186,11 +200,16 @@
   letter-spacing: -0.2px;
 }
 
+.price_current--small {
+  font-size: 16px;
+}
+
 .price_previous {
   margin: 0;
   color: var(--gray);
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
+  text-decoration: line-through;
   line-height: 16px;
 }
