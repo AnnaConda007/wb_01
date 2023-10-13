@@ -6,13 +6,13 @@ export const renderingOrderFormation = () => {
 
   topBtn.addEventListener('click', () => {
     if (products.style.display === 'none') {
-      products.style.display = 'block'
+      products.style.display = 'flex'
     } else {
       products.style.display = 'none'
     }
   })
 
-  ordersData.forEach(({ img, title, size, discountPrice, curentPrice, brend, collection, color }) => {
+  ordersData.forEach(({ img, title, size, discountPrice, curentPrice, brend, collection, quantity, color }) => {
     products.innerHTML += `
   <div class='products_product-card product-card'>
   <div class='product-card_product-img product-img'>
@@ -37,7 +37,7 @@ export const renderingOrderFormation = () => {
   <div class='product-card_quantity quantity'>
     <div class='quantity_btns'>
       <button class='quantity_btns-btn'>-</button>
-      <span class='quantity_btns-number'>1</span>
+      <span class='quantity_btns-number'>${quantity}</span>
       <button class='quantity_btns-btn'>+</button>
     </div>
     <p class='quantity_balance-in-stock'>Осталось 2 шт.</p>

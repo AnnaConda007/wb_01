@@ -8,45 +8,47 @@
   </head>
 
   <body>
-    <header class="container">
-      <div class="hamburger">
-        <img class="hamburger_icon hamburger_icon--smal" src="./assets/img/hamburgerSmal.svg" alt="меню" />
-        <img class="hamburger_icon" src="./assets/img/hamburger.svg" alt="меню" />
-        <span class="hamburger_text"> ТОВАРЫ И ТОЧКА</span>
-      </div>
-      <div class="search">
-        <input type="text" class="search_input" placeholder="Я ищу ..." />
-        <img class="search_btn" src="./assets/img/Search.svg" alt="поиск" />
-      </div>
-      <div class="user">
-        <div class="user_data data--profile">
-          <img class="user_data_icon" src="./assets/img/userIcon.svg" alt="пользователь" />
-          <span class="user_data_text"> Профиль</span>
+    <div class="container">
+      <header>
+        <div class="hamburger">
+          <img class="hamburger_icon hamburger_icon--smal" src="./assets/img/hamburgerSmal.svg" alt="меню" />
+          <img class="hamburger_icon" src="./assets/img/hamburger.svg" alt="меню" />
+          <span class="hamburger_text"> ТОВАРЫ И ТОЧКА</span>
         </div>
-        <div class="user_data data--shopping-basket">
-          <img class="user_data_icon" src="./assets/img/basket.svg" alt="пользователь" />
-          <span class="user_data_text"> Корзина</span>
+        <div class="search">
+          <input type="text" class="search_input" placeholder="Я ищу ..." />
+          <img class="search_btn" src="./assets/img/Search.svg" alt="поиск" />
         </div>
-      </div>
-    </header>
-    <main class="container">
-      <section class="order-formation">
-        <h3 class="order-formation_text">Корзина</h3>
-        <div class="order-formation_heder">
-          <label class="order-formation_check-all check-all">
-            <input type="checkbox" class="checkbox" />
-            <span class="check-all_text">Выбрать все</span>
-          </label>
-          <button class="order-formation_top">
-            <img src="./assets/img/topBtn.svg" alt="открыть" />
-          </button>
+        <div class="user">
+          <div class="user_data data--profile">
+            <img class="user_data_icon" src="./assets/img/userIcon.svg" alt="пользователь" />
+            <span class="user_data_text"> Профиль</span>
+          </div>
+          <div class="user_data data--shopping-basket">
+            <img class="user_data_icon" src="./assets/img/basket.svg" alt="пользователь" />
+            <span class="user_data_text"> Корзина</span>
+          </div>
         </div>
+      </header>
+      <main>
+        <section class="order-formation">
+          <h3 class="order-formation_text">Корзина</h3>
+          <div class="order-formation_heder">
+            <label class="order-formation_check-all check-all">
+              <input type="checkbox" class="checkbox" />
+              <span class="check-all_text">Выбрать все</span>
+            </label>
+            <button class="order-formation_top">
+              <img src="./assets/img/topBtn.svg" alt="открыть" />
+            </button>
+          </div>
 
-        <div class="products"></div>
-      </section>
-      <section class="total-information">dd</section>
-    </main>
-    <footer class="container">футер</footer>
-    <script type="module" src="./scripts/index.js"></script>
+          <div class="products"></div>
+        </section>
+        <section class="total-information">dd</section>
+      </main>
+      <footer>футер</footer>
+    </div>
   </body>
+  <script type="module" src="./scripts/index.js"></script>
 </html>
