@@ -31,24 +31,36 @@
         </div>
       </header>
       <main>
-        <section class="order-formation">
-          <h3 class="order-formation_text">Корзина</h3>
-          <div class="order-formation_heder">
-            <label class="order-formation_check-all check-all">
-              <input type="checkbox" class="checkbox" />
-              <span class="check-all_text">Выбрать все</span>
-            </label>
-            <button class="order-formation_top">
-              <img src="./assets/img/topBtn.svg" alt="открыть" />
-            </button>
-          </div>
+        <section class="products">
+          <h3 class="products__text">Корзина</h3>
+          <section class="products__prod-containner prod-containner">
+            <div class="prod-containne__heder heder">
+              <label class="order-formation_check-all check-all">
+                <input type="checkbox" class="checkbox" />
+                <span class="check-all_text">Выбрать все</span>
+              </label>
+              <button class="heder__topBtn">
+                <img src="./assets/img/topBtn.svg" alt="открыть" />
+              </button>
+            </div>
+            <div class="prod-containner__product-cards product-cards"></div>
+          </section>
 
-          <div class="products"></div>
+          <section class="products__prod-containner prod-containner">
+            <div class="prod-containne__heder heder">
+              <p>Отсутствуют 3 товара</p>
+              <button class="heder__topBtn">
+                <img src="./assets/img/topBtn.svg" alt="открыть" />
+              </button>
+            </div>
+            <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
+          </section>
         </section>
         <section class="total-information">dd</section>
       </main>
       <footer>футер</footer>
     </div>
   </body>
+
   <script type="module" src="./scripts/index.js"></script>
 </html>
