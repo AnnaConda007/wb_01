@@ -56,49 +56,73 @@
               <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
             </section>
           </section>
-          <section class="delivery">
-            <div class="delivery__method method">
-              <h2 class="method__text text-title">Способ доставки</h2>
+          <section class="delivery order-setup">
+            <div class="order-setup__header">
+              <h2 class="order-setup__header__title">Способ доставки</h2>
               <button class="changeBtn">Изменить</button>
             </div>
-            <div class="delivery_pick-up-point pick-up-point">
-              <p class="pick-up-point_text-title delivery-text-title">Пункт выдачи</p>
-              <div class="pick-up-point__address">
-                <p class="pick-up-point_text-value delivery-text-value">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <div class="order-setup__flex">
+              <p class="order-setup__flex__title">Пункт выдачи</p>
+              <div class="order-setup__flex__pick-up-point-address pick-up-point-address">
+                <p class="pick-up-point-address order-setup__flex__value">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                 <div class="pick-up-point__time">
                   <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
-                  <p class="pick-up-point_text-raiting delivery-text-value delivery-text-value--sm">4.99</p>
-                  <p class="pick-up-point_text-value delivery-text-value delivery-text-value--sm">Ежедневно в 10 до 21</p>
+                  <p class="pick-up-point_text-raiting order-setup__flex__value order-setup__flex__value--sm">4.99</p>
+                  <p class="pick-up-point-addressorder-setup__flex__value order-setup__flex__value--sm">Ежедневно в 10 до 21</p>
                 </div>
               </div>
             </div>
-            <div class="delivery__cost">
-              <p class="pick-up-point__text-title delivery-text-title">Стоимость доставки</p>
-              <p class="pick-up-point__text-value delivery-text-value">Бесплатно</p>
+            <div class="order-setup__flex">
+              recipient-input
+              <p class="order-setup__flex__title">Стоимость доставки</p>
+              <p class="order-setup__flex__value">Бесплатно</p>
             </div>
-            <div class="delivery__date-container">
-            </div>
+            <div class="order-setup__flex delivery__date-container"></div>
             <div class="delivery__return return">
               <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
-              <p class="return__text delivery-text-value--sm">
+              <p class="return__text order-setup__flex__value--sm">
                 Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
               </p>
             </div>
           </section>
+
+          <section class="order-setup payment">
+            <div class="order-setup__header">
+              <h2 class="order-setup__header__title">Способ оплаты</h2>
+              <button class="changeBtn">Изменить</button>
+            </div>
+            <div class="payment__card card">
+              <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
+              <p class="card__num">1234 56** **** 1234 <span class="card-date">01/30</span></p>
+            </div>
+            <p class="order-setup__flex__value--sm order-setup__flex__value--sm order-setup__flex__value--grey">Спишеи оплату с карты при получении</p>
+          </section>
+
+          <section class="order-setup recipient">
+            <div class="order-setup__header">
+              <h2 class="order-setup__header__title">Получатель</h2>
+            </div>
+            <form action="" class="recipient__form form">
+              <div class="form__first-row first-row recipient-form">
+                <input class="first-row__input recipient-input" type="text" placeholder="Имя" />
+                <input class="first-row__input recipient-input" type="text" placeholder="Фамилия" />
+              </div>
+              <div class="form__second-row second-row recipient-form">
+                <input class="second-row__input recipient-input" type="text" placeholder="Почта" />
+                <input class="second-row__input recipient-input" type="text" placeholder="Телефон" />
+                <label class="label-inn-input" for="inn-input">
+                  <input class="second-row__input recipient-input recipient-input-inn" type="text" id="inn-input" placeholder="ИНН" />
+                  <span class="inn-input order-setup__flex__value order-setup__flex__value--sm">Для таможенного оформления</span>
+                </label>
+              </div>
+            </form>
+          </section>
         </section>
       </main>
+
       <footer>футер</footer>
     </div>
   </body>
 
   <script type="module" src="./scripts/index.js"></script>
 </html>
-
-
-
-
-
-
-
-
- 
