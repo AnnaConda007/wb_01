@@ -5,6 +5,7 @@ export const renderingOrderFormation = () => {
   const topBtn = document.querySelector('.header__topBtn')
   const productsDisabled = document.querySelector('.product-cards--disabled')
   const topBtnDisabled = document.querySelector('.header__topBtn--disabled')
+  const deliveryImgContainer = document.querySelector('.delivery__date-container')
 
   topBtn.addEventListener('click', () => {
     if (products.style.display === 'none') {
@@ -86,4 +87,51 @@ export const renderingOrderFormation = () => {
 </div>
   `
   })
+
+  const { inStockEnough, inStockNotEnough } = ordersData.reduce(
+    (acc, order) => {
+      if (order.quantity <= order.inStock) {
+        acc.inStockEnough.push(order)
+      } else {
+        acc.inStockEnough.push({
+          ...order,
+          quantity: order.inStock,
+        })
+        acc.inStockNotEnough.push({
+          ...order,
+          quantity: order.quantity - order.inStock,
+        })
+      }
+      return acc
+    },
+    { inStockEnough: [], inStockNotEnough: [] }
+  )
+
+  function generateDeliveryDateHTML(date, orders) {
+    return `
+    <div class="date-container__delivery__date delivery__date">
+      <p class="delivery__date__text-title delivery-text-title">${date}</p>
+      <div class="delivery__date__product-container">
+        ${orders
+          .map(
+            ({ img, quantity }) => `
+          <div class='delivery__date__product-img-container'>
+            <img class='delivery__date__img-product' src=${img} alt='фото товара' />
+            <div class='delivery__date__img-amount'   > 
+            <span class="delivery__date__img-amount-text">${quantity} </span>
+             </div>
+           
+          </div>
+        `
+          )
+          .join('')}
+      </div>
+    </div>
+  `
+  }
+
+  const inStockEnoughHTML = generateDeliveryDateHTML(inStockEnough[0].date[0], inStockEnough)
+  const inStockNotEnoughHTML = generateDeliveryDateHTML(inStockEnough[0].date[1], inStockNotEnough)
+
+  deliveryImgContainer.innerHTML += inStockEnoughHTML + inStockNotEnoughHTML
 }

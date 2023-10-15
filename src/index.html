@@ -31,32 +31,61 @@
         </div>
       </header>
       <main>
-        <section class="products">
-          <h3 class="products__text">Корзина</h3>
-          <section class="products__prod-containner prod-containner">
-            <div class="prod-containne__header header">
-              <label class="order-formation_check-all check-all">
-                <input type="checkbox" class="checkbox" />
-                <span class="check-all_text">Выбрать все</span>
-              </label>
-              <button class="header__topBtn">
-                <img src="./assets/img/topBtn.svg" alt="открыть" />
-              </button>
-            </div>
-            <div class="prod-containner__product-cards product-cards"></div>
+        <section class="left-column">
+          <section class="left-column__products products">
+            <h3 class="products__text">Корзина</h3>
+            <section class="products__prod-containner prod-containner">
+              <div class="prod-containne__header header">
+                <label class="order-formation_check-all check-all">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="check-all_text">Выбрать все</span>
+                </label>
+                <button class="header__topBtn">
+                  <img src="./assets/img/topBtn.svg" alt="открыть" />
+                </button>
+              </div>
+              <div class="prod-containner__product-cards product-cards"></div>
+            </section>
+            <section class="products__prod-containner prod-containner">
+              <div class="prod-containne__header header">
+                <p class="header__text-disabled">Отсутствуют &middot; 3 товара</p>
+                <button class="header__topBtn header__topBtn--disabled">
+                  <img src="./assets/img/topBtn.svg" alt="открыть" />
+                </button>
+              </div>
+              <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
+            </section>
           </section>
-
-          <section class="products__prod-containner prod-containner">
-            <div class="prod-containne__header header">
-              <p  class="header__text-disabled">Отсутствуют &middot; 3 товара</p>
-              <button class="header__topBtn header__topBtn--disabled">
-                <img src="./assets/img/topBtn.svg" alt="открыть" />
-              </button>
+          <section class="delivery">
+            <div class="delivery__method method">
+              <h2 class="method__text text-title">Способ доставки</h2>
+              <button class="changeBtn">Изменить</button>
             </div>
-            <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
+            <div class="delivery_pick-up-point pick-up-point">
+              <p class="pick-up-point_text-title delivery-text-title">Пункт выдачи</p>
+              <div class="pick-up-point__address">
+                <p class="pick-up-point_text-value delivery-text-value">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                <div class="pick-up-point__time">
+                  <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
+                  <p class="pick-up-point_text-raiting delivery-text-value delivery-text-value--sm">4.99</p>
+                  <p class="pick-up-point_text-value delivery-text-value delivery-text-value--sm">Ежедневно в 10 до 21</p>
+                </div>
+              </div>
+            </div>
+            <div class="delivery__cost">
+              <p class="pick-up-point__text-title delivery-text-title">Стоимость доставки</p>
+              <p class="pick-up-point__text-value delivery-text-value">Бесплатно</p>
+            </div>
+            <div class="delivery__date-container">
+            </div>
+            <div class="delivery__return return">
+              <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
+              <p class="return__text delivery-text-value--sm">
+                Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
+              </p>
+            </div>
           </section>
         </section>
-        <section class="total-information">dd</section>
       </main>
       <footer>футер</footer>
     </div>
@@ -64,3 +93,12 @@
 
   <script type="module" src="./scripts/index.js"></script>
 </html>
+
+
+
+
+
+
+
+
+ 

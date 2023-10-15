@@ -9,6 +9,8 @@ export const ordersData = [
     quantity: 1,
     curentPrice: 522,
     discountPrice: 1051,
+    inStock: 2000,
+    date: ['5—6 февраяля', '7—8 февраяля'],
   },
   {
     img: './assets/img/products/2.png',
@@ -17,9 +19,11 @@ export const ordersData = [
     size: '',
     collection: 'WB',
     brend: 'OOO Мегапрофстиль',
-    quantity: 1,
+    quantity: 200,
     curentPrice: '2100047',
     discountPrice: '2300047',
+    inStock: 184,
+    date: ['5—6 февраяля', '7—8 февраяля'],
   },
   {
     img: './assets/img/products/3.png',
@@ -28,8 +32,10 @@ export const ordersData = [
     size: '',
     collection: 'WB',
     brend: 'ООО Вайлдберриз',
-    quantity: 1,
+    quantity: 2,
     curentPrice: 494,
     discountPrice: 950,
+    inStock: 200,
+    date: ['5—6 февраяля', '7—8 февраяля'],
   },
 ]
