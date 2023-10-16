@@ -110,7 +110,7 @@ export const renderingOrderFormation = () => {
   function generateDeliveryDateHTML(date, orders) {
     return `
     <div class="date-container__delivery__date delivery__date">
-      <p class="delivery__date__order-setup__header__title order-setup__flex__title  ">${date}</p>
+      <p class="delivery__date__section-title section-subtitle  ">${date}</p>
       <div class="delivery__date__product-container">
         ${orders
           .map(

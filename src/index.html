@@ -36,7 +36,7 @@
             <h3 class="products__text">Корзина</h3>
             <section class="products__prod-containner prod-containner">
               <div class="prod-containne__header header">
-                <label class="order-formation_check-all check-all">
+                <label class="order-formation_check-all check-all checkbox-label">
                   <input type="checkbox" class="checkbox" />
                   <span class="check-all_text">Выбрать все</span>
                 </label>
@@ -57,50 +57,49 @@
             </section>
           </section>
           <section class="delivery order-setup">
-            <div class="order-setup__header">
-              <h2 class="order-setup__header__title">Способ доставки</h2>
+            <div class="section-header">
+              <h2 class="section-title">Способ доставки</h2>
               <button class="changeBtn">Изменить</button>
             </div>
             <div class="order-setup__flex">
-              <p class="order-setup__flex__title">Пункт выдачи</p>
+              <p class="section-subtitle">Пункт выдачи</p>
               <div class="order-setup__flex__pick-up-point-address pick-up-point-address">
-                <p class="pick-up-point-address order-setup__flex__value">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                <p class="pick-up-point-address section-value-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                 <div class="pick-up-point__time">
                   <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
-                  <p class="pick-up-point_text-raiting order-setup__flex__value order-setup__flex__value--sm">4.99</p>
-                  <p class="pick-up-point-addressorder-setup__flex__value order-setup__flex__value--sm">Ежедневно в 10 до 21</p>
+                  <p class="pick-up-point_text-raiting section-value-text section-value-text--sm">4.99</p>
+                  <p class="pick-up-point-addresssection-value-text section-value-text--sm">Ежедневно в 10 до 21</p>
                 </div>
               </div>
             </div>
             <div class="order-setup__flex">
-              recipient-input
-              <p class="order-setup__flex__title">Стоимость доставки</p>
-              <p class="order-setup__flex__value">Бесплатно</p>
+              <p class="section-subtitle">Стоимость доставки</p>
+              <p class="section-value-text">Бесплатно</p>
             </div>
             <div class="order-setup__flex delivery__date-container"></div>
             <div class="delivery__return return">
               <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
-              <p class="return__text order-setup__flex__value--sm">
+              <p class="return__text section-value-text--sm">
                 Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
               </p>
             </div>
           </section>
 
           <section class="order-setup payment">
-            <div class="order-setup__header">
-              <h2 class="order-setup__header__title">Способ оплаты</h2>
+            <div class="section-header">
+              <h2 class="section-title">Способ оплаты</h2>
               <button class="changeBtn">Изменить</button>
             </div>
             <div class="payment__card card">
               <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
               <p class="card__num">1234 56** **** 1234 <span class="card-date">01/30</span></p>
             </div>
-            <p class="order-setup__flex__value--sm order-setup__flex__value--sm order-setup__flex__value--grey">Спишеи оплату с карты при получении</p>
+            <p class="section-value-text--sm section-value-text--sm section-value-text--grey">Спишем оплату с карты при получении</p>
           </section>
 
           <section class="order-setup recipient">
-            <div class="order-setup__header">
-              <h2 class="order-setup__header__title">Получатель</h2>
+            <div class="section-header">
+              <h2 class="section-title">Получатель</h2>
             </div>
             <form action="" class="recipient__form form">
               <div class="form__first-row first-row recipient-form">
@@ -112,11 +111,79 @@
                 <input class="second-row__input recipient-input" type="text" placeholder="Телефон" />
                 <label class="label-inn-input" for="inn-input">
                   <input class="second-row__input recipient-input recipient-input-inn" type="text" id="inn-input" placeholder="ИНН" />
-                  <span class="inn-input order-setup__flex__value order-setup__flex__value--sm">Для таможенного оформления</span>
+                  <span class="inn-input section-value-text section-value-text--sm">Для таможенного оформления</span>
                 </label>
               </div>
             </form>
           </section>
+        </section>
+        <section class="right-column">
+          <div class="right-column__total-info total-info">
+            <div class="total-info__header section-header">
+              <h2 class="section-title">Итого</h2>
+              <h2 class="total-info__sum">2 101 063 com</h2>
+            </div>
+            <div class="total-info__main-content">
+              <div class="data-list-container">
+                <div class="data-list data-list">
+                  <p class="data-list__title">203 товара</p>
+                  <p class="data-list__value">2 302 048 сом</p>
+                </div>
+                <div class="data-list data-list">
+                  <p class="data-list__title">Скидка</p>
+                  <p class="data-list__value">-200 985 сом</p>
+                </div>
+                <div class="data-list data-list">
+                  <p class="data-list__title">Доставка</p>
+                  <p class="data-list__value">Бесплатно</p>
+                </div>
+              </div>
+              <div class="total-info__delivery">
+                <div class="total_info__title">
+                  <p class="section-subtitle section-subtitle--bold">Доставка в пункт выдачи</p>
+                  <button class="changeBtn"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
+                </div>
+                <div class="total-info_delivery__pick-up-point-address pick-up-point-address">
+                  <p class="pick-up-point-address section-value-text--sm">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="pick-up-point__time">
+                    <p class="pick-up-point-address section-value-text section-value-text--sm">5-8 фев</p>
+                  </div>
+                </div>
+                <div class="delivery__return gray-bg">
+                  <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
+                  <p class="return__text section-value-text--sm">
+                    Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
+                  </p>
+                </div>
+              </div>
+              <div class="total-info__payment">
+                <div class="total_info__title">
+                  <p class="section-subtitle section-subtitle--bold">Оплата картой</p>
+                  <button class="changeBtn"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
+                </div>
+                <div class="payment__card card">
+                  <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
+                  <p class="card__num--sm section-value-text--sm">1234 56** **** 1234</p>
+                </div>
+                <div>
+                  <div class="payment__checkbox-cotnainer checkbox-cotnainer gray-bg gray-bg---higher">
+                    <label class="checkbox-label">
+                      <input type="checkbox" class="checkbox" />
+                      <span class="section-value-text--sm">Списать оплату сразу</span>
+                    </label>
+                    <p class="section-value-text--sm section-value-text--sm section-value-text--grey">Спишеи оплату с карты при получении</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total-info__order-btn-container order-btn-container">
+                <button class="order-btn-container order-btn">Заказать</button>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="section-value-text--sm">Соглашаюсь с правилами пользования торговой площадкой и возврата</span>
+                </label>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
