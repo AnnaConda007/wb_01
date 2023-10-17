@@ -3,8 +3,8 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  box-sizing: border-box;
-  padding: 15px;  
+  box-sizing: border-box; 
+  padding: 14px 15px 17px 15px;
 }
 
 .hamburger {
@@ -25,12 +25,12 @@ header {
 }
 
 .hamburger_text {
-  font-size: 19px;
+  width: 102px;
+  font-size: 20px;
   line-height: 22px;
-  padding-right: 10px;
+  padding-right: 5px;
   letter-spacing: 2px;
   font-weight: 600;
-  width: 100px;
 }
 
 .search {

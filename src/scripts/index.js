@@ -1,5 +1,6 @@
-import { renderingOrderFormation } from './modules/rendering/order-formation.js'
-
+import { renderProducts } from './modules/renderProducts.js'
+import { renderingDisabledProducts } from './modules/renderDisabledProduct.js'
 window.addEventListener('DOMContentLoaded', async function () {
-  renderingOrderFormation()
+  renderProducts()
+  renderingDisabledProducts()
 })
