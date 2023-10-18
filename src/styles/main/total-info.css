@@ -3,6 +3,7 @@
   height: fit-content;
   padding: 15px 24px 20px 24px;
   max-width: 429px;
+  min-width: 303px;
   box-sizing: border-box;
   background-color: var(--white);
   border-radius: 10px;

@@ -14,9 +14,11 @@ main {
 .left-column {
   display: flex;
   flex-direction: column;
-  width: 65%;
-  max-width: 925px;
+   max-width: 925px;
+   flex-grow: 1;
+   flex-shrink: 1;
   margin-top: 10px;
+  background-color: rgb(186, 126, 126);
 }
 
 .total-information {
@@ -31,8 +33,7 @@ main {
 .right-column {
   display: flex;
   justify-content: flex-end;
-  width: 35%;
-}
+ }
 
 @media (max-width: 1024px) {
   .left-column {
@@ -41,8 +42,7 @@ main {
   }
 
   .right-column {
-    min-width: 305px;
-    padding-right: 20px;
+    min-width: 305px; 
   }
 }
 @media (max-width: 325px) {

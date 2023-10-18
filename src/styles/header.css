@@ -80,6 +80,7 @@ header {
 
 .data--shopping-basket {
   padding-right: 10px;
+  position: relative;
 }
 
 .user_data_icon {
@@ -174,6 +175,8 @@ header {
     }
   }
 }
+
+ 
 
 @media (max-width: 325px) {
   .hamburger_icon {

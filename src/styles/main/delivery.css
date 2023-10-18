@@ -105,7 +105,7 @@
   height: 55px;
 }
 
-.delivery__date__img-amount {
+.amount-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,10 +115,14 @@
   right: -5px;
   top: -5px;
   border-radius: 45%;
-  min-width: 16px;
+  min-width: 16px; 
 }
 
-.delivery__date__img-amount-text {
+.amount-box-shopping-basket{
+  display: none;
+}
+
+.amount-box-text {
   font-size: 15px;
 }
 
@@ -194,7 +198,7 @@
 }
 
 .second-row__input {
-  min-width: 218px;
+  max-width: 218px;
 }
 
 label {

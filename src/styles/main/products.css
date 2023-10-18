@@ -22,6 +22,7 @@
 }
 
 .header__text-disabled {
+  display: none;
   font-weight: 600;
   font-size: 15px;
 }
@@ -62,7 +63,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
 }
 
 .product-checkbox {
@@ -100,9 +101,8 @@
   flex-grow: 1;
   justify-content: flex-start;
   gap: 7px;
-  min-width: 320px;
   margin-left: 15px;
-  padding-top: 10px; 
+  padding-top: 10px;
 }
 
 .info--disabled {
@@ -129,8 +129,17 @@
   }
 
   .card__info {
-min-width: 300px;
- 
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .card__info {
+    min-width: auto;
+  }
+
+  .second-row__input {
+    width: 32%;
   }
 }
 

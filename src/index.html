@@ -27,6 +27,9 @@
           <div class="user_data data--shopping-basket">
             <img class="user_data_icon" src="./assets/img/basket.svg" alt="пользователь" />
             <span class="user_data_text"> Корзина</span>
+            <div class="amount-box amount-box-shopping-basket ">
+              <span class="amount-box-text amount-box-text-shopping-basket "></span>
+            </div>
           </div>
         </div>
       </header>
@@ -48,7 +51,7 @@
             </section>
             <section class="products__prod-containner prod-containner">
               <div class="prod-containne__header header">
-                <p class="header__text-disabled">Отсутствуют &middot; 3 товара</p>
+                <p class="header__text-disabled">Отсутствует &middot; <span class="text-disabled-num"></span> товара</p>
                 <button class="header__topBtn header__topBtn--disabled">
                   <img src="./assets/img/topBtn.svg" alt="открыть" />
                 </button>
@@ -123,17 +126,17 @@
           <div class="right-column__total-info total-info">
             <div class="total-info__header section-header">
               <h2 class="section-title">Итого</h2>
-              <h2 class="total-info__sum">2 101 063 com</h2>
+              <h2 class="total-info__sum total-sum"><span class="total-sum-num"> </span>com</h2>
             </div>
             <div class="total-info__main-content">
               <div class="data-list-container">
                 <div class="data-list data-list">
                   <p class="data-list__title">203 товара</p>
-                  <p class="data-list__value">2 302 048 сом</p>
+                  <p class="data-list__value total-sum-without-discount"><span class="without-discount-num"> </span> сом</p>
                 </div>
                 <div class="data-list data-list">
                   <p class="data-list__title">Скидка</p>
-                  <p class="data-list__value">-200 985 сом</p>
+                  <p class="data-list__value discount-sum"><span class="discount-num"> </span> сом</p>
                 </div>
                 <div class="data-list data-list">
                   <p class="data-list__title">Доставка</p>
