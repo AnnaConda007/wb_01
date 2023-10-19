@@ -27,8 +27,8 @@
           <div class="user_data data--shopping-basket">
             <img class="user_data_icon" src="./assets/img/basket.svg" alt="пользователь" />
             <span class="user_data_text"> Корзина</span>
-            <div class="amount-box amount-box-shopping-basket ">
-              <span class="amount-box-text amount-box-text-shopping-basket "></span>
+            <div class="amount-box amount-box-shopping-basket">
+              <span class="amount-box-text amount-box-text-shopping-basket"></span>
             </div>
           </div>
         </div>
@@ -59,67 +59,68 @@
               <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
             </section>
           </section>
-          <section class="delivery order-setup">
-            <div class="section-header">
-              <h2 class="section-title">Способ доставки</h2>
-              <button class="changeBtn">Изменить</button>
-            </div>
-            <div class="order-setup__flex">
-              <p class="section-subtitle">Пункт выдачи</p>
-              <div class="order-setup__flex__pick-up-point-address pick-up-point-address">
-                <p class="pick-up-point-address section-value-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                <div class="pick-up-point__time">
-                  <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
-                  <p class="pick-up-point_text-raiting section-value-text section-value-text--sm">4.99</p>
-                  <p class="pick-up-point-addresssection-value-text section-value-text--sm">Ежедневно в 10 до 21</p>
+          <section class="order-info">
+            <section class="delivery order-setup">
+              <div class="section-header">
+                <h2 class="section-title">Способ доставки</h2>
+                <button class="changeBtn">Изменить</button>
+              </div>
+              <div class="order-setup__flex">
+                <p class="section-subtitle">Пункт выдачи</p>
+                <div class="order-setup__flex__pick-up-point-address pick-up-point-address">
+                  <p class="pick-up-point-address section-value-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="pick-up-point__time">
+                    <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
+                    <p class="pick-up-point_text-raiting section-value-text section-value-text--sm">4.99</p>
+                    <p class="pick-up-point-addresssection-value-text section-value-text--sm">Ежедневно в 10 до 21</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="order-setup__flex">
-              <p class="section-subtitle">Стоимость доставки</p>
-              <p class="section-value-text">Бесплатно</p>
-            </div>
-            <div class="order-setup__flex delivery__date-container"></div>
-            <div class="delivery__return return">
-              <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
-              <p class="return__text section-value-text--sm">
-                Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
-              </p>
-            </div>
-          </section>
+              <div class="order-setup__flex">
+                <p class="section-subtitle">Стоимость доставки</p>
+                <p class="section-value-text">Бесплатно</p>
+              </div>
+              <div class="order-setup__flex delivery__date-container"></div>
+              <div class="delivery__return return">
+                <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
+                <p class="return__text section-value-text--sm">
+                  Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
+                </p>
+              </div>
+            </section>
+            <section class="order-setup payment">
+              <div class="section-header">
+                <h2 class="section-title">Способ оплаты</h2>
+                <button class="changeBtn">Изменить</button>
+              </div>
+              <div class="payment__card card">
+                <div class="card_num-container">
+                  <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
+                  <p class="card__num">1234 56** **** 1234 <span class="card-date">01/30</span></p>
+                </div>
+                <p class="card__num__text section-value-text--sm section-value-text--sm section-value-text--grey">Спишем оплату с карты при получении</p>
+              </div>
+            </section>
 
-          <section class="order-setup payment">
-            <div class="section-header">
-              <h2 class="section-title">Способ оплаты</h2>
-              <button class="changeBtn">Изменить</button>
-            </div>
-            <div class="payment__card card">
-              <div class="card_num-container">
-                <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
-                <p class="card__num">1234 56** **** 1234 <span class="card-date">01/30</span></p>
+            <section class="order-setup recipient">
+              <div class="section-header">
+                <h2 class="section-title">Получатель</h2>
               </div>
-              <p class="card__num__text section-value-text--sm section-value-text--sm section-value-text--grey">Спишем оплату с карты при получении</p>
-            </div>
-          </section>
-
-          <section class="order-setup recipient">
-            <div class="section-header">
-              <h2 class="section-title">Получатель</h2>
-            </div>
-            <form action="" class="recipient__form form">
-              <div class="form__first-row first-row recipient-form">
-                <input class="first-row__input recipient-input" type="text" placeholder="Имя" />
-                <input class="first-row__input recipient-input" type="text" placeholder="Фамилия" />
-              </div>
-              <div class="form__second-row second-row recipient-form">
-                <input class="second-row__input recipient-input" type="text" placeholder="Почта" />
-                <input class="second-row__input recipient-input" type="text" placeholder="Телефон" />
-                <label class="label-inn-input" for="inn-input">
-                  <input class="second-row__input recipient-input recipient-input-inn" type="text" id="inn-input" placeholder="ИНН" />
-                  <span class="inn-input section-value-text section-value-text--sm">Для таможенного оформления</span>
-                </label>
-              </div>
-            </form>
+              <form action="" class="recipient__form form">
+                <div class="form__first-row first-row recipient-form">
+                  <input class="first-row__input recipient-input" type="text" placeholder="Имя" />
+                  <input class="first-row__input recipient-input" type="text" placeholder="Фамилия" />
+                </div>
+                <div class="form__second-row second-row recipient-form">
+                  <input class="second-row__input recipient-input" type="text" placeholder="Почта" />
+                  <input class="second-row__input recipient-input" type="text" placeholder="Телефон" />
+                  <label class="label-inn-input" for="inn-input">
+                    <input class="second-row__input recipient-input recipient-input-inn" type="text" id="inn-input" placeholder="ИНН" />
+                    <span class="inn-input section-value-text section-value-text--sm">Для таможенного оформления</span>
+                  </label>
+                </div>
+              </form>
+            </section>
           </section>
         </section>
         <section class="right-column">
@@ -145,13 +146,12 @@
               </div>
               <div class="total-info__delivery">
                 <div class="total_info__title">
-                  <p class="section-subtitle section-subtitle--bold">Доставка в пункт выдачи</p>
-                  <button class="changeBtn"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
+                  <p class="section-subtitle section-subtitle--bold  desktop ">Доставка в пункт выдачи</p>
+                  <button class="changeBtn desktop"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
                 </div>
                 <div class="total-info_delivery__pick-up-point-address pick-up-point-address">
-                  <p class="pick-up-point-address section-value-text--sm">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <p class="pick-up-point-address section-value-text--sm desktop">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                   <div class="pick-up-point__time">
-                    <p class="pick-up-point-address section-value-text section-value-text--sm">5-8 фев</p>
                   </div>
                 </div>
                 <div class="delivery__return gray-bg">
@@ -162,11 +162,11 @@
                 </div>
               </div>
               <div class="total-info__payment">
-                <div class="total_info__title">
+                <div class="total_info__title desktop">
                   <p class="section-subtitle section-subtitle--bold">Оплата картой</p>
                   <button class="changeBtn"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
                 </div>
-                <div class="payment__card card">
+                <div class="payment__card card desktop">
                   <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
                   <p class="card__num--sm section-value-text--sm">1234 56** **** 1234</p>
                 </div>

@@ -94,3 +94,20 @@
     padding-bottom: 10px;
   }
 }
+
+@media (max-width: 350px) {
+  .right-column__total-info {
+    padding-bottom: 10px;
+    min-width: auto;
+    background-color: var(--grayBackground);
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gray-bg{
+    background-color: #F0ECF4;
+  }
+  .total-info__main-content{
+    gap: 10px;
+  }
+}

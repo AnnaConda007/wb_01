@@ -20,7 +20,7 @@ export const renderingDisabledProducts = () => {
   })
 
   productsDisabled.innerHTML = ``
-  ordersData.forEach(({ img, title, size, color }) => {
+  ordersData.forEach(({ img, title, size, color },index) => {
     productsDisabled.innerHTML += `
     <div class="product-cards_card card product-cards_card--disabled">
     <div class="card__flex-container">
@@ -51,7 +51,7 @@ export const renderingDisabledProducts = () => {
         <div class="quantity_icons-btns icons-btns">       
         <button>   <img src="./assets/img/like.svg" alt="добавить в избранное " /> </button>
         
-        <button class="delite">    <img src="./assets/img/trash.svg" alt="удалить " />  </button>
+        <button class="delite" data-product-index="${index}"> <img src="./assets/img/trash.svg" alt="удалить " /> </button>
         </div>
       </div>
     </div>
