@@ -48,23 +48,6 @@ main {
     min-width: 305px;
   }
 }
-@media (max-width: 325px) {
-  main {
-    top: 60px;
-  }
-}
-
-/*
-@media (max-width: 600px) {
-  main {
-    flex-direction: column; 
-  }
-  .order-formation,
-  .total-information {
-    width: 100%;
-  }
-}
-*/
 
 @media (max-width: 1000px) {
   main {
@@ -72,9 +55,7 @@ main {
     align-items: center;
     padding: 0;
   }
-}
 
-@media (max-width: 1000px) {
   .desktop {
     display: none;
   }
@@ -95,9 +76,14 @@ main {
 
   .right-column {
     min-width: auto;
+    margin-top: -10px;
   }
 
   .left-column {
     margin-top: 0;
+  }
+
+  main {
+    top: 60px;
   }
 }

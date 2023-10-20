@@ -10,8 +10,7 @@
 }
 
 .total-info__main-content {
-  padding-top: 5px;
-  gap: 23px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -47,6 +46,10 @@
   flex-direction: column;
   gap: 1px;
   margin-bottom: 3px;
+}
+
+.pick-up-point-address {
+  padding-bottom: 10px;
 }
 
 .checkbox {
@@ -104,10 +107,23 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  .gray-bg{
-    background-color: #F0ECF4;
+
+  .gray-bg {
+    background-color: #f0ecf4;
   }
-  .total-info__main-content{
-    gap: 10px;
+
+  .total-info__main-content {
+    gap: 0;
+  }
+
+  .total-info__delivery {
+    margin-bottom: 10px;
+  }
+
+  .total-info__sum {
+    font-size: 20px;
+  }
+  .order-btn {
+    margin-top: 20px;
   }
 }

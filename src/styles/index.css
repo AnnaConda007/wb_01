@@ -55,4 +55,37 @@ body {
   }
 }
 
+.checkbox {
+  display: none;
+}
 
+.checkbox-label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.checkbox-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background-color: var(--pink);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.checkbox:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}

@@ -6,12 +6,12 @@ export const renderProducts = () => {
   const amountProducts = document.querySelector('.amount-box-shopping-basket')
   const amountProductsText = document.querySelector('.amount-box-text-shopping-basket')
 
-if(ordersData.length){
-  amountProducts.style.display="flex"
-  amountProductsText.textContent = ordersData.length
-} else {
-  amountProducts.style.display="none"
-}
+  if (ordersData.length) {
+    amountProducts.style.display = 'flex'
+    amountProductsText.textContent = ordersData.length
+  } else {
+    amountProducts.style.display = 'none'
+  }
 
   topBtn.addEventListener('click', () => {
     if (products.style.display === 'none') {
@@ -21,22 +21,23 @@ if(ordersData.length){
     }
   })
 
-
-
   products.innerHTML = ``
   ordersData.forEach(({ img, title, size, inStock, withoutDiscount, curentPrice, brend, collection, quantity, color }, index) => {
     products.innerHTML += `
     <div class="product-cards_card card">
     <div class="card__flex-container">
       <div class="card__img-container img-container">
-        <input type="checkbox" class="checkbox product-checkbox" />
+      <label class=" checkbox-label product-checkbox">
+      <input type="checkbox" class="checkbox  " />
+      <span ></span>  
+    </label>
         <img src="${img}" alt="фото товара" class="img-container_img" />
       </div>
       <div class="card__info info">
       <div class="card__price price mobile">
       <p ${curentPrice.length >= 5 ? `class='price_current price_current--small'` : `class="price_current"`}> <span class ="price_current-num">  ${(
-    curentPrice * quantity
-  ).toLocaleString()}  </span>com</p>
+      curentPrice * quantity
+    ).toLocaleString()}  </span>com</p>
       <p class="price_previous"> <span class ="price_previous-num"> ${(withoutDiscount * quantity).toLocaleString()}</span> com</p>
     </div>
         <p class="info-title">${title}</p>
