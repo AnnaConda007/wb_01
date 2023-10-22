@@ -9,7 +9,9 @@ export const renderingDisabledProducts = () => {
   if (ordersData.length) {
     quantityText.style.display = 'block'
     quantityNum.textContent = ordersData.length
-  } else {   quantityText.style.display = 'none'}
+  } else {
+    quantityText.style.display = 'none'
+  }
 
   topBtnDisabled.addEventListener('click', () => {
     if (productsDisabled.style.display === 'none') {
@@ -20,10 +22,10 @@ export const renderingDisabledProducts = () => {
   })
 
   productsDisabled.innerHTML = ``
-  ordersData.forEach(({ img, title, size, color },index) => {
+  ordersData.forEach(({ img, title, size, color }, index) => {
     productsDisabled.innerHTML += `
     <div class="product-cards_card card product-cards_card--disabled">
-    <div class="card__flex-container">
+    <div class="card__flex-container card__flex-container--disabled">
       <div class="card__img-container img-container">
         <img src="${img}" alt="фото товара" class="img-container_img" />
       </div>

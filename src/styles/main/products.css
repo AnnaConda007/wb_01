@@ -339,6 +339,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  
+
+  .card__price {
+    align-items: center;
+  }
 
   .checkbox-label.product-checkbox {
     position: absolute;
@@ -354,6 +359,7 @@
     gap: 3px;
   }
 
+  .price_previous,
   .price_current {
     display: flex;
   }
@@ -372,16 +378,13 @@
     justify-content: flex-end;
   }
 
-  .quantity_icons-btns {
-    margin-right: 15px;
-  }
-
   .prod-containner {
     padding-bottom: 40px;
   }
 
-  .prod-containner__product-cards {
-    gap: 0;
+  .prod-containne__header {
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .product-cards_card {

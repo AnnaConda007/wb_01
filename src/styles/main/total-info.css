@@ -98,16 +98,16 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 1000px) {
   .right-column__total-info {
     padding-bottom: 10px;
     min-width: auto;
     background-color: var(--grayBackground);
-    margin-top: 30px;
     padding-left: 15px;
     padding-right: 15px;
   }
-
+}
+@media (max-width: 350px) {
   .gray-bg {
     background-color: #f0ecf4;
   }
@@ -123,6 +123,7 @@
   .total-info__sum {
     font-size: 20px;
   }
+
   .order-btn {
     margin-top: 20px;
   }

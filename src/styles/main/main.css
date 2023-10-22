@@ -65,6 +65,8 @@ main {
   }
 }
 
+
+
 @media (max-width: 350px) {
   .desktop {
     display: none;
@@ -76,7 +78,7 @@ main {
 
   .right-column {
     min-width: auto;
-    margin-top: -10px;
+    margin-top: -20px;
   }
 
   .left-column {

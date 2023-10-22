@@ -76,7 +76,7 @@
                   </div>
                 </div>
               </div>
-              <div class="order-setup__flex">
+              <div class="order-setup__flex delivery__cost ">
                 <p class="section-subtitle">Стоимость доставки</p>
                 <p class="section-value-text">Бесплатно</p>
               </div>
@@ -108,15 +108,32 @@
               </div>
               <form action="" class="recipient__form form">
                 <div class="form__first-row first-row recipient-form">
-                  <input class="first-row__input recipient-input" type="text" placeholder="Имя" />
-                  <input class="first-row__input recipient-input" type="text" placeholder="Фамилия" />
+                  <label class="validate-label first-row__input">
+                    <input class="recipient-input validate-name" type="text" placeholder="Имя" />
+                    <span class="validate-message validate-hidden validate-error-name section-value-text--sm">Укажите имя</span>
+                  </label>
+
+                  <label class="validate-label first-row__input">
+                    <input class="recipient-input validate-surname" type="text" placeholder="Фамилия" />
+                    <span class="validate-message validate-hidden validate-error-surname section-value-text--sm">Введите фамилию</span>
+                  </label>
                 </div>
                 <div class="form__second-row second-row recipient-form">
-                  <input class="second-row__input recipient-input" type="text" placeholder="Почта" />
-                  <input class="second-row__input recipient-input" type="text" placeholder="Телефон" />
-                  <label class="label-inn-input" for="inn-input">
-                    <input class="second-row__input recipient-input recipient-input-inn" type="text" id="inn-input" placeholder="ИНН" />
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-email" type="text" placeholder="Почта" />
+                    <span class="validate-message validate-hidden validate-error-email section-value-text--sm">Укажите электронную почту</span> 
+                    <span class="validate-message validate-hidden validate-error-email-format section-value-text--sm">Проверьте адрес электронной почты</span>
+                  </label>
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-phone" type="text" placeholder="Телефон" />
+                    <span class="validate-message validate-hidden validate-error-phone-format section-value-text--sm">Формат: +9 999 999 99 99</span>
+                    <span class="validate-message validate-hidden validate-error-phone section-value-text--sm">Укажите номер телефона</span>
+                  </label>
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-inn " type="text"  placeholder="ИНН" />
                     <span class="inn-input section-value-text section-value-text--sm">Для таможенного оформления</span>
+                    <span class="validate-message validate-hidden validate-error-inn-format section-value-text--sm">Проверьте ИНН</span>
+                    <span class="validate-message validate-hidden validate-error-inn section-value-text--sm">Укажите ИНН</span>
                   </label>
                 </div>
               </form>
@@ -146,13 +163,12 @@
               </div>
               <div class="total-info__delivery">
                 <div class="total_info__title">
-                  <p class="section-subtitle section-subtitle--bold  desktop ">Доставка в пункт выдачи</p>
+                  <p class="section-subtitle section-subtitle--bold desktop">Доставка в пункт выдачи</p>
                   <button class="changeBtn desktop"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
                 </div>
                 <div class="total-info_delivery__pick-up-point-address pick-up-point-address">
                   <p class="pick-up-point-address section-value-text--sm desktop">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                  <div class="pick-up-point__time">
-                  </div>
+                  <div class="pick-up-point__time"></div>
                 </div>
                 <div class="delivery__return gray-bg">
                   <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />

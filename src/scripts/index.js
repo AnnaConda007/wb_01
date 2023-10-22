@@ -4,6 +4,7 @@ import { increasingProduct } from './modules/increasingProduct.js'
 import { renderingDeliverydProducts } from './modules/renderDeliveryProducts.js'
 import { deliteProduct } from './modules/deliteProduct.js'
 import { renderTotalSum } from './modules/renderTotalSum.js'
+import validate from './modules/validate.js'
 window.addEventListener('DOMContentLoaded', async function () {
   renderProducts()
   renderTotalSum()
@@ -12,4 +13,5 @@ window.addEventListener('DOMContentLoaded', async function () {
   renderingDeliverydProducts()
   increasingProduct()
   deliteProduct()
+  validate()
 })
