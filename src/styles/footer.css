@@ -10,4 +10,14 @@ footer {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.5%;
- }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between; 
+  list-style-type: none; /* Убираем маркеры */
+  background-color: aliceblue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
