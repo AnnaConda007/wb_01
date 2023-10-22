@@ -6,6 +6,7 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 25px;
+  padding-bottom: 50px;
   box-sizing: border-box;
   background-color: var(--grayBackground);
   border-radius: 20px;
@@ -47,6 +48,10 @@ main {
   .right-column {
     min-width: 305px;
   }
+
+  main {
+    padding-bottom: 55px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -64,8 +69,6 @@ main {
     display: flex;
   }
 }
-
-
 
 @media (max-width: 350px) {
   .desktop {

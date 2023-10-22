@@ -296,10 +296,13 @@ label {
     max-width: none;
   }
 
+  .first-row__input,
+  .second-row__input {
+    width: 100%; 
+    max-width: none;
+  }
+
   .second-row {
     padding-top: 10px;
   }
-
-  .right-column__total-info {
-   }
 }

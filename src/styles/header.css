@@ -201,8 +201,7 @@ header {
 
   .hamburger_text {
     min-width: 200px;
-    background-color: antiquewhite;
-    margin-left: 10px;
+     margin-left: 10px;
     letter-spacing: 1px;
   }
 }
