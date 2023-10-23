@@ -248,7 +248,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  color: #FF3B30;
+  color: #ff3b30;
 }
 
 .quantity_icons-btns {
@@ -340,7 +340,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
 
   .card__price {
     align-items: center;

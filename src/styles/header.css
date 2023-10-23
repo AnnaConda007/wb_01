@@ -132,13 +132,6 @@ header {
     padding-left: 0;
   }
 
-  /*
-  .search {
-    position: absolute;
-    left: 0;
-    width: 95%;
-  } */
-
   .hamburger_text {
     padding-right: 0;
     padding-left: 10px;
@@ -201,7 +194,7 @@ header {
 
   .hamburger_text {
     min-width: 200px;
-     margin-left: 10px;
+    margin-left: 10px;
     letter-spacing: 1px;
   }
 }

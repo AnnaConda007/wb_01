@@ -13,11 +13,7 @@ footer {
 }
 
 .nav__list {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  background-color: aliceblue;
-  width: 100%;
+  display: none;
 }
 
 .cart-nav {
