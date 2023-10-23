@@ -3,11 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <title>Товары и точк а</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <title>Товары и точка</title>
   </head>
+
   <body>
-    " "вв
-    <script src="./index.js"></script>
+    <div class="container">
+      <header>
+        <div class="hamburger">
+          <img class="hamburger_icon hamburger_icon--smal" src="./assets/img/hamburgerSmal.svg" alt="меню" />
+          <img class="hamburger_icon" src="./assets/img/hamburger.svg" alt="меню" />
+          <span class="hamburger_text"> ТОВАРЫ И ТОЧКА</span>
+        </div>
+        <div class="search">
+          <input type="text" class="search_input" placeholder="Я ищу ..." />
+          <img class="search_btn" src="./assets/img/Search.svg" alt="поиск" />
+        </div>
+        <div class="user">
+          <div class="user_data data--profile">
+            <img class="user_data_icon" src="./assets/img/userIcon.svg" alt="пользователь" />
+            <span class="user_data_text"> Профиль</span>
+          </div>
+          <div class="user_data data--shopping-basket">
+            <img class="user_data_icon" src="./assets/img/basket.svg" alt="пользователь" />
+            <span class="user_data_text"> Корзина</span>
+            <div class="amount-box amount-box-shopping-basket">
+              <span class="amount-box-text amount-box-text-shopping-basket"></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="left-column">
+          <section class="left-column__products products">
+            <h3 class="products__text">Корзина</h3>
+            <section class="products__prod-containner prod-containner">
+              <div class="prod-containne__header header">
+                <label class="order-formation_check-all check-all checkbox-label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="check-all_text">Выбрать все</span>
+                </label>
+                <button class="header__topBtn">
+                  <img src="./assets/img/topBtn.svg" alt="открыть" />
+                </button>
+              </div>
+              <div class="prod-containner__product-cards product-cards"></div>
+            </section>
+            <section class="products__prod-containner prod-containner">
+              <div class="prod-containne__header header">
+                <p class="header__text-disabled">Отсутствует &middot; <span class="text-disabled-num"></span> товара</p>
+                <button class="header__topBtn header__topBtn--disabled">
+                  <img src="./assets/img/topBtn.svg" alt="открыть" />
+                </button>
+              </div>
+              <div class="prod-containner__product-cards product-cards product-cards--disabled"></div>
+            </section>
+          </section>
+          <section class="order-info">
+            <section class="delivery order-setup">
+              <div class="section-header">
+                <h2 class="section-title">Способ доставки</h2>
+                <button class="changeBtn">Изменить</button>
+              </div>
+              <div class="order-setup__flex">
+                <p class="section-subtitle">Пункт выдачи</p>
+                <div class="order-setup__flex__pick-up-point-address pick-up-point-address">
+                  <p class="pick-up-point-address section-value-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="pick-up-point__time">
+                    <img class="pick-up-point__raiting-img" src="./assets/img/raiting.svg" alt="рейтинг" />
+                    <p class="pick-up-point_text-raiting section-value-text section-value-text--sm">4.99</p>
+                    <p class="pick-up-point-addresssection-value-text section-value-text--sm">Ежедневно в 10 до 21</p>
+                  </div>
+                </div>
+              </div>
+              <div class="order-setup__flex delivery__cost">
+                <p class="section-subtitle">Стоимость доставки</p>
+                <p class="section-value-text">Бесплатно</p>
+              </div>
+              <div class="order-setup__flex delivery__date-container"></div>
+              <div class="delivery__return return">
+                <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
+                <p class="return__text section-value-text--sm">
+                  Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
+                </p>
+              </div>
+            </section>
+            <section class="order-setup payment">
+              <div class="section-header">
+                <h2 class="section-title">Способ оплаты</h2>
+                <button class="changeBtn">Изменить</button>
+              </div>
+              <div class="payment__card card">
+                <div class="card_num-container">
+                  <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
+                  <p class="card__num">1234 56** **** 1234 <span class="card-date">01/30</span></p>
+                </div>
+                <p class="card__num__text section-value-text--sm section-value-text--sm section-value-text--grey">Спишем оплату с карты при получении</p>
+              </div>
+            </section>
+
+            <section class="order-setup recipient">
+              <div class="section-header">
+                <h2 class="section-title">Получатель</h2>
+              </div>
+              <form action="" class="recipient__form form">
+                <div class="form__first-row first-row recipient-form">
+                  <label class="validate-label first-row__input">
+                    <input class="recipient-input validate-name" type="text" placeholder="Имя" />
+                    <span class="validate-message validate-hidden validate-error-name section-value-text--sm">Укажите имя</span>
+                  </label>
+
+                  <label class="validate-label first-row__input">
+                    <input class="recipient-input validate-surname" type="text" placeholder="Фамилия" />
+                    <span class="validate-message validate-hidden validate-error-surname section-value-text--sm">Введите фамилию</span>
+                  </label>
+                </div>
+                <div class="form__second-row second-row recipient-form">
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-email" type="text" placeholder="Почта" />
+                    <span class="validate-message validate-hidden validate-error-email section-value-text--sm">Укажите электронную почту</span>
+                    <span class="validate-message validate-hidden validate-error-email-format section-value-text--sm">Проверьте адрес электронной почты</span>
+                  </label>
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-phone" type="text" placeholder="Телефон" />
+                    <span class="validate-message validate-hidden validate-error-phone-format section-value-text--sm">Формат: +9 999 999 99 99</span>
+                    <span class="validate-message validate-hidden validate-error-phone section-value-text--sm">Укажите номер телефона</span>
+                  </label>
+                  <label class="validate-label second-row__input">
+                    <input class="recipient-input validate-inn" type="text" placeholder="ИНН" />
+                    <span class="inn-input section-value-text section-value-text--sm">Для таможенного оформления</span>
+                    <span class="validate-message validate-hidden validate-error-inn-format section-value-text--sm">Проверьте ИНН</span>
+                    <span class="validate-message validate-hidden validate-error-inn section-value-text--sm">Укажите ИНН</span>
+                  </label>
+                </div>
+              </form>
+            </section>
+          </section>
+        </section>
+        <section class="right-column">
+          <div class="right-column__total-info total-info">
+            <div class="total-info__header section-header">
+              <h2 class="section-title">Итого</h2>
+              <h2 class="total-info__sum total-sum"><span class="total-sum-num"> </span>com</h2>
+            </div>
+            <div class="total-info__main-content">
+              <div class="data-list-container">
+                <div class="data-list data-list">
+                  <p class="data-list__title">203 товара</p>
+                  <p class="data-list__value total-sum-without-discount"><span class="without-discount-num"> </span> сом</p>
+                </div>
+                <div class="data-list data-list">
+                  <p class="data-list__title">Скидка</p>
+                  <p class="data-list__value discount-sum"><span class="discount-num"> </span> сом</p>
+                </div>
+                <div class="data-list data-list">
+                  <p class="data-list__title">Доставка</p>
+                  <p class="data-list__value">Бесплатно</p>
+                </div>
+              </div>
+              <div class="total-info__delivery">
+                <div class="total_info__title">
+                  <p class="section-subtitle section-subtitle--bold desktop">Доставка в пункт выдачи</p>
+                  <button class="changeBtn desktop"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
+                </div>
+                <div class="total-info_delivery__pick-up-point-address pick-up-point-address">
+                  <p class="pick-up-point-address section-value-text--sm desktop">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="pick-up-point__time"></div>
+                </div>
+                <div class="delivery__return gray-bg">
+                  <img class="return__img" src="./assets/img/Rectangle.svg" alt="галочка" />
+                  <p class="return__text section-value-text--sm">
+                    Обратная доставка товаров на склад при отказе —<span class="delivery-return-free"> бесплатно</span>
+                  </p>
+                </div>
+              </div>
+              <div class="total-info__payment">
+                <div class="total_info__title desktop">
+                  <p class="section-subtitle section-subtitle--bold">Оплата картой</p>
+                  <button class="changeBtn"><img src="./assets/img/changeIcon.svg" alt="изменить" /></button>
+                </div>
+                <div class="payment__card card desktop">
+                  <img class="card__img" src="./assets/img/mir.svg" alt="карта мир" />
+                  <p class="card__num--sm section-value-text--sm">1234 56** **** 1234</p>
+                </div>
+                <div>
+                  <div class="payment__checkbox-cotnainer checkbox-cotnainer gray-bg gray-bg---higher">
+                    <label class="checkbox-label">
+                      <input type="checkbox" class="checkbox" />
+                      <span class="section-value-text--sm">Списать оплату сразу</span>
+                    </label>
+                    <p class="section-value-text--sm section-value-text--sm section-value-text--grey">Спишем оплату с карты при получении</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total-info__order-btn-container order-btn-container">
+                <button class="order-btn-container order-btn">Заказать</button>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="section-value-text--sm">Соглашаюсь с правилами пользования торговой площадкой и возврата</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p class="footer__text">© 2022 ООО «Товары и точка»</p>
+      </footer>
+      <nav>
+        <ul class="nav__list">
+          <li>
+            <img src="./assets/img/nav/main.svg" alt="домой" />
+          </li>
+          <li>
+            <img src="./assets/img/nav/catalog.svg" alt="каталог" />
+          </li>
+          <li class="cart-nav">
+            <img src="./assets/img/nav/cart.svg" alt="корзина" />
+            <div class="amount-box amount-box-shopping-basket">
+              <span class="amount-box-text amount-box-text-shopping-basket"></span>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/img/nav/favorites.svg" alt="избранное" />
+          </li>
+          <li>
+            <img src="./assets/img/nav/profile.svg" alt="мой аккаунт" />
+          </li>
+        </ul>
+      </nav>
+    </div>
   </body>
+
+  <script type="module" src="./scripts/index.js"></script>
 </html>

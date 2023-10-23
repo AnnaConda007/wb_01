@@ -4,6 +4,29 @@
   "rules": {
     "color-no-invalid-hex": true,
     "declaration-colon-newline-after": null,
-    "order/properties-order": ["display", "width", "height", "margin", "padding", " background-color", "color", "..."]
+    "order/properties-order": [
+      "display",
+      "flex",
+      "flex-basis",
+      "flex-direction",
+      "flex-flow",
+      "flex-grow",
+      "flex-shrink",
+      "flex-wrap",
+      "align-content",
+      "align-items",
+      "align-self",
+      "justify-content",
+      "justify-items",
+      "justify-self",
+      "order",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      " background-color",
+      "color",
+      "..."
+    ]
   }
 }
