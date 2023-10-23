@@ -11,8 +11,6 @@ export const deliteProduct = () => {
     btn.addEventListener('click', (event) => {
       const productIndex = parseInt(event.target.dataset.productIndex)
       ordersData.splice(productIndex, 1)
-
-      console.log(ordersData)
       renderProducts()
       renderTotalSum()
       renderingDisabledProducts()

@@ -7,11 +7,11 @@ export const renderProducts = () => {
   const amountProductsText = document.querySelector('.amount-box-text-shopping-basket')
 
   amountProducts.forEach((amountProduct) => {
-    if (ordersData.length) {
+    if (ordersData && ordersData.length) {
       amountProduct.style.display = 'flex'
       amountProduct.textContent = ordersData.length
     } else {
-      amountProducts.style.display = 'none'
+      amountProduct.style.display = 'none'
     }
   })
 

@@ -129,15 +129,12 @@ const validate = () => {
   }
 
   submitBtn.addEventListener('click', function (event) {
-    console.log('Button clicked')
-
     const inputs = form.querySelectorAll('input')
     inputs.forEach((input) => {
       touchedFields.add(input)
       validateField(input, findValidator(input))
     })
 
-    console.log(validateForm())
     if (!validateForm()) {
       event.preventDefault()
     }
