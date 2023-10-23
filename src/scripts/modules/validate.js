@@ -36,10 +36,10 @@ const validate = () => {
 
   const formatPhone = (value) => {
     return value
-      .replace(/\D/g, '') // Удаляем все нецифровые символы
-      .replace(/(\d{1,4})/g, '$1 ') // Добавляем пробел после каждых 4 цифр
-      .trim() // Удаляем пробел в конце строки, если он есть
-      .slice(0, 30) // Обрезаем строку до 30 символов
+      .replace(/\D/g, '')
+      .replace(/(\d{1,4})/g, '$1 ')
+      .trim()
+      .slice(0, 30)
   }
 
   const validateInn = (value) => {
@@ -51,20 +51,18 @@ const validate = () => {
     const valid = validator(value)
     const errorMessages = input.parentElement.querySelectorAll('.validate-message')
     errorMessages.forEach((msg) => {
-      msg.classList.add('validate-hidden') // Скрываем все сообщения
+      msg.classList.add('validate-hidden')
     })
     if (!valid && touchedFields.has(input)) {
       const errorMessage = findErrorMessage(input, validator, value)
       if (errorMessage) {
-        errorMessage.classList.remove('validate-hidden') // Показываем нужное сообщение
+        errorMessage.classList.remove('validate-hidden')
       }
     }
     return valid
   }
 
   const validateForm = () => {
-    console.log('Validating form')
-
     let valid = true
     const nameInput = document.querySelector('.validate-name')
     valid = valid && validateField(nameInput, validateName)
@@ -89,6 +87,7 @@ const validate = () => {
     }
     return parent.querySelector('.validate-error-' + validator.name.replace('validate', '').toLowerCase())
   }
+
   form.addEventListener('input', function (event) {
     const input = event.target
     if (input.classList.contains('validate-name')) {
@@ -98,7 +97,7 @@ const validate = () => {
     } else if (input.classList.contains('validate-email')) {
       validateField(input, validateEmail)
     } else if (input.classList.contains('validate-phone')) {
-      input.value = formatPhone(input.value) // Форматируем номер перед валидацией
+      input.value = formatPhone(input.value)
       validateField(input, validatePhone)
     } else if (input.classList.contains('validate-inn')) {
       validateField(input, validateInn)
@@ -109,8 +108,8 @@ const validate = () => {
     'blur',
     function (event) {
       const input = event.target
-      touchedFields.add(input) // Поле было затронуто
-      validateField(input, findValidator(input)) // Валидируем поле
+      touchedFields.add(input)
+      validateField(input, findValidator(input))
     },
     true
   )
@@ -132,11 +131,10 @@ const validate = () => {
   submitBtn.addEventListener('click', function (event) {
     console.log('Button clicked')
 
-    // Добавляем все поля формы в множество 'touchedFields'
     const inputs = form.querySelectorAll('input')
     inputs.forEach((input) => {
       touchedFields.add(input)
-      validateField(input, findValidator(input)) // Валидируем поле
+      validateField(input, findValidator(input))
     })
 
     console.log(validateForm())

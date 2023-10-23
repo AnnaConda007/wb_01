@@ -14,10 +14,21 @@ footer {
 
 .nav__list {
   display: flex;
-  justify-content: space-between; 
-  list-style-type: none; /* Убираем маркеры */
+  justify-content: space-between;
+  list-style-type: none;
   background-color: aliceblue;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+}
+
+.cart-nav {
+  position: relative;
+}
+@media (max-width: 320px) {
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: aliceblue;
+    width: 100%;
+  }
 }

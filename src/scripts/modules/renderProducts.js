@@ -3,15 +3,17 @@ import { ordersData } from '../../orderData.js'
 export const renderProducts = () => {
   const products = document.querySelector('.prod-containner__product-cards')
   const topBtn = document.querySelector('.header__topBtn')
-  const amountProducts = document.querySelector('.amount-box-shopping-basket')
+  const amountProducts = document.querySelectorAll('.amount-box-shopping-basket')
   const amountProductsText = document.querySelector('.amount-box-text-shopping-basket')
 
-  if (ordersData.length) {
-    amountProducts.style.display = 'flex'
-    amountProductsText.textContent = ordersData.length
-  } else {
-    amountProducts.style.display = 'none'
-  }
+  amountProducts.forEach((amountProduct) => {
+    if (ordersData.length) {
+      amountProduct.style.display = 'flex'
+      amountProduct.textContent = ordersData.length
+    } else {
+      amountProducts.style.display = 'none'
+    }
+  })
 
   topBtn.addEventListener('click', () => {
     if (products.style.display === 'none') {
