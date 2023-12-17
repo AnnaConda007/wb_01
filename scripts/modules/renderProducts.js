@@ -30,7 +30,7 @@ export const renderProducts = () => {
     <div class="card__flex-container">
       <div class="card__img-container img-container">
       <label class=" checkbox-label product-checkbox">
-      <input type="checkbox" class="checkbox  " />
+      <input type="checkbox" class="checkbox check-product" />
       <span ></span>  
     </label>
         <img src="${img}" alt="фото товара" class="img-container_img" />
