@@ -1,6 +1,6 @@
-import { ordersData } from '../../orderData.js'
+ import { ordersData } from '../../orderData.js'
 
-export const renderingDisabledProducts = () => {
+ export const renderingDisabledProducts = () => {
   const productsDisabled = document.querySelector('.product-cards--disabled')
   const topBtnDisabled = document.querySelector('.header__topBtn--disabled')
   const quantityText = document.querySelector('.header__text-disabled')

@@ -1,5 +1,5 @@
 import { ordersData } from '../../orderData.js'
-
+import { selectedAddress } from './constants.js'
 export const renderProducts = () => {
   const products = document.querySelector('.prod-containner__product-cards')
   const topBtn = document.querySelector('.header__topBtn')
@@ -24,7 +24,7 @@ export const renderProducts = () => {
   })
 
   products.innerHTML = ``
-  ordersData.forEach(({ img, title, size, inStock, withoutDiscount, curentPrice, brend, collection, quantity, color }, index) => {
+  ordersData.forEach(({ img, title, size, inStock, withoutDiscount, curentPrice, brend, collection, quantity, color , ogrn, adress}, index) => {
     products.innerHTML += `
     <div class="product-cards_card card">
     <div class="card__flex-container">
@@ -61,9 +61,14 @@ export const renderProducts = () => {
         <div class="details_addition addition">
           <p class="addition_text">Коледино ${collection}</p>
           <div class="addition_brand brand">
-            <p class="addition_text desktop">${brend}</p>
+            <p class="addition_text">${brend} </p>
             <img src="./assets/img/exclamation .svg" class="brand_exclamation" alt="предупрежедение" />
-          </div>    
+          <div class="popap popap__brend">
+          <h2 class="popap__title">${brend.toUpperCase()} </h2>
+          <p class="popap__OGRN">ОГРН: ${ogrn} </p>
+          <p class="popap__adrees">${adress} </p>
+          </div>
+            </div>    
         </div>
       </div>
     </div>
@@ -94,4 +99,6 @@ export const renderProducts = () => {
   
   `
   })
+
+
 }

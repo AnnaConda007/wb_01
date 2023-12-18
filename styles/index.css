@@ -25,8 +25,7 @@ button {
 
 html,
 body {
-  min-height: 100%;
-  height: 100%;
+  
   box-sizing: border-box;
   font-family: 'UI', sans-serif;
 }
@@ -34,6 +33,10 @@ body {
 * {
   margin: 0;
   padding: 0;
+}
+
+body{
+  position: relative;
 }
 
 .container {
@@ -88,3 +91,70 @@ body {
   border: solid white;
   border-width: 0 3px 3px 0;
 }
+
+.popup-beck{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup{
+   background-color:var(--white) ;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.close{
+  display: flex;
+  justify-content: flex-end; 
+}
+
+ 
+
+ .popup_btn-wrap{
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+
+ }
+
+ .popup_adress-container{
+  padding-bottom: 10px;
+ }
+
+.popup_adress-list{
+  list-style-type: none;
+}
+
+.popup_btn-option{
+  border: 1px solid var(--gray);
+  padding: 10px ;
+  width: 130px;
+  border-radius: 30px;
+}
+.popup_btn-option:hover{
+  border: 1px solid var(--pink)
+}
+
+ .popup-change-adress_choose-btn{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--white);
+  background-color: var(--pink);
+  width: 110px;
+  padding: 10px;
+  border-radius: 10px;
+ }
+ .popup_adress-list-item{
+  display: flex;
+ }
+
+ .address-radio-input{
+  flex-grow: 1; 
+ }
