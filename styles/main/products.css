@@ -291,6 +291,9 @@
   text-decoration: line-through;
   line-height: 16px;
 }
+.fav-active{
+  display: none;
+}
 
 .popap {
   position: absolute;

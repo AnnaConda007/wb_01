@@ -82,7 +82,9 @@ export const renderProducts = () => {
         ${inStock - quantity <= 2 ? `<p class="quantity_balance-in-stock">Осталось <span class="stock-text"> ${inStock - quantity}</span> шт.</p>` : ''}
 
         <div class="quantity_icons-btns icons-btns">
-        <button>   <img src="./assets/img/like.svg" alt="добавить в избранное " /> </button>
+        <button class="fav-icon-button">
+        <img src="./assets/img/like.svg" alt="добавить в избранное" class="fav-icon" />
+      </button>
         
         <button class="delite" data-product-index="${index}"> <img src="./assets/img/trash.svg" alt="удалить " /> </button>
       
@@ -99,6 +101,11 @@ export const renderProducts = () => {
   
   `
   })
-
+  products.addEventListener('click', (event) => {
+    if (event.target.classList.contains('fav-icon')) {
+      const favIcon = event.target;
+      favIcon.src = favIcon.src.includes('like.svg') ? './assets/img/like-active.svg' : './assets/img/like.svg';
+    }
+  });
 
 }
