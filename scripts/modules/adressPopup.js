@@ -1,80 +1,92 @@
 import { setSelectedAddress, selectedAddress } from "./constants.js";
 
 export const addressPopup = () => {
-  let tempAddress = "";
   const addresses = [
     "Бишкек, улица Табышалиева, 57",
     "Бишкек, улица Жукеева-Пудовкина, 77",
     "Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1",
   ];
-  const change = document.querySelector(".change-delivery")
-   const closeButton = document.querySelector('.close');
-  const popupBackground = document.querySelector('.popup-beck');
-  const adress = document.querySelector(".adress-value");
-  const addressListElement = document.querySelector(".popup_adress-list");
-  const changePointButton = document.querySelector(".popup_btn-change_point");
-  const changeDeliveryButton = document.querySelector(
-    ".popup_btn-change_delivery"
-  );
-  const chooseBtn = document.querySelector(".popup-change-adress_choose-btn"); // Убедитесь, что класс кнопки написан правильно
-  setSelectedAddress(addresses[0]);
-  const renderAddresses = (list) => {
-    let listItemsHTML = "";
+  
+   let currentAddress = selectedAddress || addresses[0];
+  setSelectedAddress(currentAddress);  
 
-    list.forEach((address, index) => {
-      listItemsHTML += `
-        <li class="popup_adress-list-item">
+ 
+  const overlay = document.querySelector('.popup-beck');
+  const addressModal = document.querySelector('.popup-change-adress');
+  const changeAddressButtons = document.querySelectorAll(".change-delivery");
+  const addressElements = document.querySelectorAll(".adress-value");
+  const addressListContainer = document.querySelector(".popup_adress-list");
+  const selectAddressButton = document.querySelector(".popup-change-adress_choose-btn");
+  const closeButton = document.querySelector('.close');
+
+   
+  const updateAddressDisplay = () => {
+    addressElements.forEach(element => element.textContent = currentAddress);
+  };
+
+  const deleteAddress = (index) => {
+    addresses.splice(index, 1);
+    renderAddressList();
+    updateAddressDisplay();
+  };
+
+  const renderAddressList = () => {
+    const listItemsHTML = addresses.map((address, index) => `
+      <li class="popup_list-item">
         <div class="address-radio-input"> 
-        <input type="radio" id="address${index}" name="address" value="${address}" >
+          <input type="radio" id="address${index}" name="address" value="${address}" ${currentAddress === address ? 'checked' : ''}>
           <label for="address${index}">${address}</label>
-          </div>
-          <button class="address-delete-button" data-index="${index}">
-            <img src="../../assets/img/delete.png" alt="Удалить">
-          </button>
-        </li>
-      `;
+        </div>
+        <button class="address-delete-button" data-index="${index}">
+          <img src="../../assets/img/delete.png" alt="Удалить">
+        </button>
+      </li>
+    `).join('');
+
+    addressListContainer.innerHTML = listItemsHTML;
+
+    addressListContainer.querySelectorAll('.address-radio-input input').forEach(radioInput => {
+      radioInput.addEventListener("change", () => {
+        currentAddress = radioInput.value;
+      });
     });
 
-    addressListElement.innerHTML = listItemsHTML;
-
-    list.forEach((address, index) => {
-      const radioInput = document.getElementById(`address${index}`);
-      radioInput.addEventListener("change", () => {
-        tempAddress = address;
-      });
-
-      const deleteButton = document.querySelector(
-        `button[data-index="${index}"]`
-      );
-      deleteButton.addEventListener("click", () => {
-        addresses.splice(index, 1);
-        renderAddresses(addresses);
+    addressListContainer.querySelectorAll('.address-delete-button').forEach(button => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();  
+        deleteAddress(parseInt(button.dataset.index, 10));
       });
     });
   };
 
-  renderAddresses(addresses);
-
-  changePointButton.addEventListener("click", () => {
-    renderAddresses([addresses[0]]);
-  });
-
-  changeDeliveryButton.addEventListener("click", () => {
-    renderAddresses(addresses);
-  });
-
-  chooseBtn.addEventListener("click", () => {
-    if (tempAddress) {
-      setSelectedAddress(tempAddress);
-      adress.innerHTML = selectedAddress;
-    }  
+  selectAddressButton.addEventListener("click", () => {
+    if (currentAddress) {
+      setSelectedAddress(currentAddress);
+      updateAddressDisplay();
+      overlay.style.display = 'none';
+      addressModal.style.display = 'none';
+    }
   });
 
   closeButton.addEventListener('click', () => {
-    popupBackground.style.display = 'none';
+    overlay.style.display = 'none';
+    addressModal.style.display = 'none';
   });
 
-  change.addEventListener('click', () => {
-    popupBackground.style.display = 'flex';
+  changeAddressButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+      addressModal.style.display = 'block';
+    });
   });
+
+  overlay.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+      overlay.style.display = 'none';
+       addressModal.style.display = 'none';
+    }
+  });
+
+   renderAddressList();
+  updateAddressDisplay();
 };

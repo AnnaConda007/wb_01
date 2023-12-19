@@ -108,6 +108,7 @@ body{
    background-color:var(--white) ;
   border-radius: 10px;
   padding: 30px;
+  display: none;
 }
 
 .close{
@@ -115,7 +116,9 @@ body{
   justify-content: flex-end; 
 }
 
- 
+ .popup_title{
+  padding-bottom: 15px;
+ }
 
  .popup_btn-wrap{
   display: flex;
@@ -142,7 +145,7 @@ body{
   border: 1px solid var(--pink)
 }
 
- .popup-change-adress_choose-btn{
+ .choose-btn{
   margin-top: 25px;
   margin-bottom: 10px;
   color: var(--white);
@@ -151,8 +154,9 @@ body{
   padding: 10px;
   border-radius: 10px;
  }
- .popup_adress-list-item{
+ .popup_list-item{
   display: flex;
+  padding: 10px;
  }
 
  .address-radio-input{
